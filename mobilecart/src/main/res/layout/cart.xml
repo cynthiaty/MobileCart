@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ui.CartActivity">
+
+    <ListView
+        android:id="@+id/list_cart_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"/>
+
+    <View android:id="@+id/line_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/cart_coupon"
+        android:layout_marginBottom="5dp"
+        android:background="#d2d2d2"/>
+    <RelativeLayout
+        android:id="@+id/cart_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_above="@+id/line_sum"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:text="优惠券"/>
+        <TextView
+            android:id="@+id/coupon_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View android:id="@+id/line_sum"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/cart_sum"
+        android:layout_marginBottom="5dp"
+        android:background="#d2d2d2"/>
+    <RelativeLayout
+        android:id="@+id/cart_sum"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/sum"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:text="合计：¥0.0"/>
+        <Button
+            android:id="@+id/close_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="立即结算"/>
+    </RelativeLayout>
+</RelativeLayout>
